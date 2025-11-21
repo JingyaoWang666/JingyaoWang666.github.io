@@ -1,5 +1,17 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Pianist on the Ocean</title><link>https://JingyaoWang666.github.io</link><description>Follow your heart</description><copyright>Pianist on the Ocean</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://JingyaoWang666.github.io</link></image><lastBuildDate>Fri, 21 Nov 2025 03:00:45 +0000</lastBuildDate><managingEditor>Pianist on the Ocean</managingEditor><ttl>60</ttl><webMaster>Pianist on the Ocean</webMaster><item><title>[RISC-V CPU]第六章 指令系统 笔记（二）</title><link>https://JingyaoWang666.github.io/post/%5BRISC-V%20CPU%5D-di-liu-zhang-%20-zhi-ling-xi-tong-%20-bi-ji-%EF%BC%88-er-%EF%BC%89.html</link><description>### 1.指令系统概述复习
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Pianist on the Ocean</title><link>https://JingyaoWang666.github.io</link><description>Follow your heart</description><copyright>Pianist on the Ocean</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://JingyaoWang666.github.io</link></image><lastBuildDate>Fri, 21 Nov 2025 06:23:15 +0000</lastBuildDate><managingEditor>Pianist on the Ocean</managingEditor><ttl>60</ttl><webMaster>Pianist on the Ocean</webMaster><item><title>[RISC-V CPU]第七章 CPU的结构与功能 笔记（一）</title><link>https://JingyaoWang666.github.io/post/%5BRISC-V%20CPU%5D-di-qi-zhang-%20CPU-de-jie-gou-yu-gong-neng-%20-bi-ji-%EF%BC%88-yi-%EF%BC%89.html</link><description>### 一、控制器概述
+
+
+**1.控制器的功能**
+取指令——&gt;分析指令——&gt;执行指令（包括总线管理、中断异常处理等）
+控制单元根本任务：根据指令要求依次发出一系控制信号（控制一系列受控门）
+
+
+&lt;img width='655' height='500' alt='Image' src='https://github.com/user-attachments/assets/00f77469-cb1c-4cf4-8abf-16fcefc71fda' /&gt;
+
+
+**2.指令周期**
+包括：取指周期、间址周期、执行周期、中断周期。</description><guid isPermaLink="true">https://JingyaoWang666.github.io/post/%5BRISC-V%20CPU%5D-di-qi-zhang-%20CPU-de-jie-gou-yu-gong-neng-%20-bi-ji-%EF%BC%88-yi-%EF%BC%89.html</guid><pubDate>Fri, 21 Nov 2025 06:22:46 +0000</pubDate></item><item><title>[RISC-V CPU]第六章 指令系统 笔记（二）</title><link>https://JingyaoWang666.github.io/post/%5BRISC-V%20CPU%5D-di-liu-zhang-%20-zhi-ling-xi-tong-%20-bi-ji-%EF%BC%88-er-%EF%BC%89.html</link><description>### 1.指令系统概述复习
 指令的设计是很有较大自由度，比如不同地址数目的指令。</description><guid isPermaLink="true">https://JingyaoWang666.github.io/post/%5BRISC-V%20CPU%5D-di-liu-zhang-%20-zhi-ling-xi-tong-%20-bi-ji-%EF%BC%88-er-%EF%BC%89.html</guid><pubDate>Fri, 21 Nov 2025 02:55:07 +0000</pubDate></item><item><title>[经验分享]模电经验分享——Fanyue Meng, 23 FDUME</title><link>https://JingyaoWang666.github.io/post/%5B-jing-yan-fen-xiang-%5D-mo-dian-jing-yan-fen-xiang-%E2%80%94%E2%80%94Fanyue%20Meng%2C%2023%20FDUME.html</link><description>### 模电经验分享
 
 
