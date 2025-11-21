@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html data-color-mode="light" data-dark-theme="dark" data-light-theme="light" lang="zh-CN">
+<head>
+    <meta content="text/html; charset=utf-8" http-equiv="content-type" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href='https://mirrors.sustech.edu.cn/cdnjs/ajax/libs/Primer/21.0.7/primer.css' rel='stylesheet' />
+    
+    <link rel="icon" href="https://github.githubassets.com/favicons/favicon.svg"><script>
+        let theme = localStorage.getItem("meek_theme") || "light";
+        document.documentElement.setAttribute("data-color-mode", theme);
+    </script>
+<meta name="description" content="### 1.指令系统概述复习
+指令的设计是很有较大自由度，比如不同地址数目的指令。">
+<meta property="og:title" content="[RISC-V CPU]第六章 指令系统 笔记（二）">
+<meta property="og:description" content="### 1.指令系统概述复习
+指令的设计是很有较大自由度，比如不同地址数目的指令。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://JingyaoWang666.github.io/post/%5BRISC-V%20CPU%5D-di-liu-zhang-%20-zhi-ling-xi-tong-%20-bi-ji-%EF%BC%88-er-%EF%BC%89.html">
+<meta property="og:image" content="https://github.githubassets.com/favicons/favicon.svg">
+<title>[RISC-V CPU]第六章 指令系统 笔记（二）</title>
+
+
+
+</head>
+<style>
+body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;padding: 45px;font-size: 16px;font-family: sans-serif;line-height: 1.25;}
+#header{display:flex;padding-bottom:8px;border-bottom: 1px solid var(--borderColor-muted, var(--color-border-muted));margin-bottom: 16px;}
+#footer {margin-top:64px; text-align: center;font-size: small;}
+
+</style>
+
+<style>
+.postTitle{margin: auto 0;font-size:40px;font-weight:bold;}
+.title-right{display:flex;margin:auto 0 0 auto;}
+.title-right .circle{padding: 14px 16px;margin-right:8px;}
+#postBody{border-bottom: 1px solid var(--color-border-default);padding-bottom:36px;}
+#postBody hr{height:2px;}
+#cmButton{height:48px;margin-top:48px;}
+#comments{margin-top:64px;}
+.g-emoji{font-size:24px;}
+@media (max-width: 600px) {
+    body {padding: 8px;}
+    .postTitle{font-size:24px;}
+}
+
+</style>
+
+
+
+
+<body>
+    <div id="header">
+<h1 class="postTitle">[RISC-V CPU]第六章 指令系统 笔记（二）</h1>
+<div class="title-right">
+    <a href="https://JingyaoWang666.github.io" id="buttonHome" class="btn btn-invisible circle" title="首页">
+        <svg class="octicon" width="16" height="16">
+            <path id="pathHome" fill-rule="evenodd"></path>
+        </svg>
+    </a>
+    
+    <a href="https://github.com/JingyaoWang666/JingyaoWang666.github.io/issues/4" target="_blank" class="btn btn-invisible circle" title="Issue">
+        <svg class="octicon" width="16" height="16">
+            <path id="pathIssue" fill-rule="evenodd"></path>
+        </svg>
+    </a>
+    
+
+    <a class="btn btn-invisible circle" onclick="modeSwitch();" title="切换主题">
+        <svg class="octicon" width="16" height="16" >
+            <path id="themeSwitch" fill-rule="evenodd"></path>
+        </svg>
+    </a>
+
+</div>
+</div>
+    <div id="content">
+<div class="markdown-body" id="postBody"><h3>1.指令系统概述复习</h3>
+<p>指令的设计是很有较大自由度，比如不同地址数目的指令。</p>
+<h3>2.操作类型</h3>
+<p>（1）数据传送指令<br>
+按照源-目的的顺序，分为寄存器-寄存器、寄存器-存储器（STORE）、存储器-寄存器（LOAD）、存储器-存储器。<br>
+堆栈操作：PUSH AX, POP AX<br>
+清零、置1：MOV AX, 0 ;  MOV AX, 1</p>
+<p>（2）运算指令<br>
+算术运算：加、减、乘、除、求补、以及浮点数运算、十进制数运算。    如： ADD AX, 20<br>
+逻辑运算：与、或、非、异或。    如： AND AX, 30</p>
+<p>（3）移位指令<br>
+包括：算术左移、算术右移、逻辑左移、逻辑右移、小循环左移、小循环右移、大循环左移、大循环右移</p>
+<p>（4）转移指令<br>
+无条件转移：直接跳转到某处，不取决于任何条件。类似C语言里的goto语句。    如： JMP LOOP<br>
+条件转移： 根据机器当前的程序状态字中的某位来决定是否执行转移。    如：JZ LOOP<br>
+调用与返回指令：类比C语言中的函数调用与函数返回。    如： CALL PRO1 、 RET(return)<br>
+<em>子程序可以在多处被调用，子程序调用可以嵌套；CALL和RET要配对使用；要妥善保存子程序的返回地址</em><br>
+陷阱（TRAP）指令：意外故障-陷阱信号-陷阱指令</p>
+<p>（5）输入输出指令<br>
+对I/O单独编址的计算机，设置有专门的输入输出指令，用来操纵外设。    如： IN AX,[20] ;  OUT DX,AX</p>
+<p>（6）其他指令<br>
+停机指令、空操作指令、开中断指令、关中断指令、置条件码指令；字符串传送、字符串比较、字符串查询、特权指令、向量指令、多处理机指令。</p>
+<h3>3.寻址方式</h3>
+<p><strong>操作码 + 寻址特征 + 形式地址</strong><br>
+操作码表明指令功能，寻址特征表明寻址方式，形式地址指明操作数的位置（有效地址是操作数的真实地址。有效地址可以根据当前的寻址方式，由形式地址通过某种计算得到）</p>
+<p><em>下面的讲解约定：指令字长=存储字长=机器字长</em></p>
+<p>（1）立即寻址：指令中的形式地址部分不是操作数的地址，而是操作数本身。<br>
+特点：指令执行阶段不访存。指令中留给地址A的位数限制了立即数的范围。</p>
+<p>（2）直接寻址：指令中的形式地址部分即为有效地址，即EA=A。<br>
+特点：执行阶段访问一次存储器。A的位数限制了该指令操作数的寻址范围。操作数的位置不易修改。</p>
+<p>（3）隐含寻址：指令中不直接给出操作数地址，操作数地址隐含在操作码或某个（约定）寄存器中。</p>
+<p>（4）间接寻址：指令中的形式地址不是操作数的地址，而是“操作数地址的地址”。可分为一次间址和多次间址。<br>
+一次间址：指令执行过程中需要两次访存；<br>
+多次间址：每次访问到的地址单元，看里面存的操作数的第一位是什么，代表就是真实地址还是还需要间接寻址。</p>
+<p>优点：可以扩大寻址范围；便于编址转移程序（因为如果不用间接寻址，比如直接寻址，地址就在程序指令中写死了；而间接寻址可以改间接寻址的那个存储单元中的数据，从而实现程序的浮动）。</p>
+<p>（5）寄存器(直接)寻址：指令中的形式地址直接指出寄存器的编号，操作数存储于寄存器中。    如： MOV AX,BX 指将编号为BX的寄存器中的操作数，移动到编号为AX的寄存器中。<br>
+特点：执行阶段不访存，只访问寄存器，执行速度快；可缩短指令字长（因为寄存器编号要求的位长可能比较短）。</p>
+<p>（6）寄存器间接寻址：指令中的形式地址为寄存器的编号，寄存器的内容是操作数的有效地址。<br>
+特点：有效地址在寄存器中，操作数在存储器中，执行阶段访存便于编制循环程序。</p>
+<p>（7）基址寻址：指令中的形式地址和基址寄存器的内容之和是有效地址。分为两种：一种是隐式基址寻址，采用专用寄存器作为基址寄存器（因此基址寄存器的地址相当于约定好了，不用显式地指出）；一种是显式基址寻址，采用通用寄存器作为基址寄存器（因为通用寄存器有多个，在指令中需要显式地指出使用哪一个通用寄存器作为基址寄存器）。显式基址寻址中，一般通用寄存器Ri中的内容不变，形式地址A可变（由操作系统或管理程序负责更改，用户没有权限更改）。</p>
+<p>作用：扩大寻址范围；有利于多道程序（切换基址寄存器可以切换不同进程）；基址寄存器内容由操作系统或管理程序确定。</p>
+<p>（8）变址寻址：有效地址为形式地址和变址寄存器IX的内容之和。<br>
+特点：扩大寻址范围；IX的内容由用户指定；便于处理数组问题（IX的内容作为数组首地址）。</p>
+<p>（9）相对寻址：有效地址为程序计数器PC的值与形式地址之和。即有效地址EA = (PC) + A 。括号（X）表示X中的内容。</p>
+<p>（10）堆栈寻址：遵守后进先出的原则。对应PUSH（将寄存器内容压入栈顶）/POP（将栈顶的内容弹出到某寄存器中）指令。堆栈寻址找到的单元总是栈顶的单元。</p></div>
+<div style="font-size:small;margin-top:8px;float:right;"></div>
+
+<button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>
+<div class="comments" id="comments"></div>
+
+</div>
+    <div id="footer"><div id="footer1">Copyright © <span id="copyrightYear"></span> <a href="https://JingyaoWang666.github.io">Pianist on the Ocean</a></div>
+<div id="footer2">
+    <span id="runday"></span><span>Powered by <a href="https://meekdai.com/Gmeek.html" target="_blank">Gmeek</a></span>
+</div>
+
+<script>
+var now=new Date();
+document.getElementById("copyrightYear").innerHTML=now.getFullYear();
+
+if(""!=""){
+    var startSite=new Date("");
+    var diff=now.getTime()-startSite.getTime();
+    var diffDay=Math.floor(diff/(1000*60*60*24));
+    document.getElementById("runday").innerHTML="网站运行"+diffDay+"天"+" • ";
+}
+</script></div>
+</body>
+<script>
+var IconList={'sun': 'M8 10.5a2.5 2.5 0 100-5 2.5 2.5 0 000 5zM8 12a4 4 0 100-8 4 4 0 000 8zM8 0a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0V.75A.75.75 0 018 0zm0 13a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0v-1.5A.75.75 0 018 13zM2.343 2.343a.75.75 0 011.061 0l1.06 1.061a.75.75 0 01-1.06 1.06l-1.06-1.06a.75.75 0 010-1.06zm9.193 9.193a.75.75 0 011.06 0l1.061 1.06a.75.75 0 01-1.06 1.061l-1.061-1.06a.75.75 0 010-1.061zM16 8a.75.75 0 01-.75.75h-1.5a.75.75 0 010-1.5h1.5A.75.75 0 0116 8zM3 8a.75.75 0 01-.75.75H.75a.75.75 0 010-1.5h1.5A.75.75 0 013 8zm10.657-5.657a.75.75 0 010 1.061l-1.061 1.06a.75.75 0 11-1.06-1.06l1.06-1.06a.75.75 0 011.06 0zm-9.193 9.193a.75.75 0 010 1.06l-1.06 1.061a.75.75 0 11-1.061-1.06l1.06-1.061a.75.75 0 011.061 0z', 'moon': 'M9.598 1.591a.75.75 0 01.785-.175 7 7 0 11-8.967 8.967.75.75 0 01.961-.96 5.5 5.5 0 007.046-7.046.75.75 0 01.175-.786zm1.616 1.945a7 7 0 01-7.678 7.678 5.5 5.5 0 107.678-7.678z', 'sync': 'M1.705 8.005a.75.75 0 0 1 .834.656 5.5 5.5 0 0 0 9.592 2.97l-1.204-1.204a.25.25 0 0 1 .177-.427h3.646a.25.25 0 0 1 .25.25v3.646a.25.25 0 0 1-.427.177l-1.38-1.38A7.002 7.002 0 0 1 1.05 8.84a.75.75 0 0 1 .656-.834ZM8 2.5a5.487 5.487 0 0 0-4.131 1.869l1.204 1.204A.25.25 0 0 1 4.896 6H1.25A.25.25 0 0 1 1 5.75V2.104a.25.25 0 0 1 .427-.177l1.38 1.38A7.002 7.002 0 0 1 14.95 7.16a.75.75 0 0 1-1.49.178A5.5 5.5 0 0 0 8 2.5Z', 'home': 'M6.906.664a1.749 1.749 0 0 1 2.187 0l5.25 4.2c.415.332.657.835.657 1.367v7.019A1.75 1.75 0 0 1 13.25 15h-3.5a.75.75 0 0 1-.75-.75V9H7v5.25a.75.75 0 0 1-.75.75h-3.5A1.75 1.75 0 0 1 1 13.25V6.23c0-.531.242-1.034.657-1.366l5.25-4.2Zm1.25 1.171a.25.25 0 0 0-.312 0l-5.25 4.2a.25.25 0 0 0-.094.196v7.019c0 .138.112.25.25.25H5.5V8.25a.75.75 0 0 1 .75-.75h3.5a.75.75 0 0 1 .75.75v5.25h2.75a.25.25 0 0 0 .25-.25V6.23a.25.25 0 0 0-.094-.195Z', 'github': 'M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z'};
+var utterancesLoad=0;
+
+let themeSettings={
+    "dark": ["dark","moon","#00f0ff","dark-blue"],
+    "light": ["light","sun","#ff5000","github-light"],
+    "auto": ["auto","sync","","preferred-color-scheme"]
+};
+function changeTheme(mode, icon, color, utheme){
+    document.documentElement.setAttribute("data-color-mode",mode);
+    document.getElementById("themeSwitch").setAttribute("d",value=IconList[icon]);
+    document.getElementById("themeSwitch").parentNode.style.color=color;
+    if(utterancesLoad==1){utterancesTheme(utheme);}
+}
+function modeSwitch(){
+    let currentMode=document.documentElement.getAttribute('data-color-mode');
+    let newMode = currentMode === "light" ? "dark" : currentMode === "dark" ? "auto" : "light";
+    localStorage.setItem("meek_theme", newMode);
+    if(themeSettings[newMode]){
+        changeTheme(...themeSettings[newMode]);
+    }
+}
+function utterancesTheme(theme){
+    const message={type:'set-theme',theme: theme};
+    const iframe=document.getElementsByClassName('utterances-frame')[0];
+    iframe.contentWindow.postMessage(message,'https://utteranc.es');
+}
+if(themeSettings[theme]){changeTheme(...themeSettings[theme]);}
+console.log("\n %c Gmeek last https://github.com/Meekdai/Gmeek \n","padding:5px 0;background:#02d81d;color:#fff");
+</script>
+
+<script>
+document.getElementById("pathHome").setAttribute("d",IconList["home"]);
+document.getElementById("pathIssue").setAttribute("d",IconList["github"]);
+
+
+
+function openComments(){
+    cm=document.getElementById("comments");
+    cmButton=document.getElementById("cmButton");
+    cmButton.innerHTML="loading";
+    span=document.createElement("span");
+    span.setAttribute("class","AnimatedEllipsis");
+    cmButton.appendChild(span);
+
+    script=document.createElement("script");
+    script.setAttribute("src","https://utteranc.es/client.js");
+    script.setAttribute("repo","JingyaoWang666/JingyaoWang666.github.io");
+    script.setAttribute("issue-term","title");
+    
+    if(localStorage.getItem("meek_theme")=="dark"){script.setAttribute("theme","dark-blue");}
+    else if(localStorage.getItem("meek_theme")=="light") {script.setAttribute("theme","github-light");}
+    else{script.setAttribute("theme","preferred-color-scheme");}
+    
+    script.setAttribute("crossorigin","anonymous");
+    script.setAttribute("async","");
+    cm.appendChild(script);
+
+    int=self.setInterval("iFrameLoading()",200);
+}
+
+function iFrameLoading(){
+    var utterances=document.getElementsByClassName('utterances');
+    if(utterances.length==1){
+        if(utterances[0].style.height!=""){
+            utterancesLoad=1;
+            int=window.clearInterval(int);
+            document.getElementById("cmButton").style.display="none";
+            console.log("utterances Load OK");
+        }
+    }
+}
+
+
+
+</script>
+
+
+</html>
