@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html data-color-mode="light" data-dark-theme="dark" data-light-theme="light" lang="zh-CN">
+<head>
+    <meta content="text/html; charset=utf-8" http-equiv="content-type" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href='https://mirrors.sustech.edu.cn/cdnjs/ajax/libs/Primer/21.0.7/primer.css' rel='stylesheet' />
+    
+    <link rel="icon" href="https://github.githubassets.com/favicons/favicon.svg"><script>
+        let theme = localStorage.getItem("meek_theme") || "light";
+        document.documentElement.setAttribute("data-color-mode", theme);
+    </script>
+<meta name="description" content="### 一、介绍
+课程目标：掌握如何用智能体构建应用，是 AI 领域中最重要且最有价值的技能之一。">
+<meta property="og:title" content="[Agentic AI]Module1笔记">
+<meta property="og:description" content="### 一、介绍
+课程目标：掌握如何用智能体构建应用，是 AI 领域中最重要且最有价值的技能之一。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://JingyaoWang666.github.io/post/%5BAgentic%20AI%5DModule1-bi-ji.html">
+<meta property="og:image" content="https://github.githubassets.com/favicons/favicon.svg">
+<title>[Agentic AI]Module1笔记</title>
+
+
+
+</head>
+<style>
+body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;padding: 45px;font-size: 16px;font-family: sans-serif;line-height: 1.25;}
+#header{display:flex;padding-bottom:8px;border-bottom: 1px solid var(--borderColor-muted, var(--color-border-muted));margin-bottom: 16px;}
+#footer {margin-top:64px; text-align: center;font-size: small;}
+
+</style>
+
+<style>
+.postTitle{margin: auto 0;font-size:40px;font-weight:bold;}
+.title-right{display:flex;margin:auto 0 0 auto;}
+.title-right .circle{padding: 14px 16px;margin-right:8px;}
+#postBody{border-bottom: 1px solid var(--color-border-default);padding-bottom:36px;}
+#postBody hr{height:2px;}
+#cmButton{height:48px;margin-top:48px;}
+#comments{margin-top:64px;}
+.g-emoji{font-size:24px;}
+@media (max-width: 600px) {
+    body {padding: 8px;}
+    .postTitle{font-size:24px;}
+}
+
+</style>
+
+
+
+
+<body>
+    <div id="header">
+<h1 class="postTitle">[Agentic AI]Module1笔记</h1>
+<div class="title-right">
+    <a href="https://JingyaoWang666.github.io" id="buttonHome" class="btn btn-invisible circle" title="首页">
+        <svg class="octicon" width="16" height="16">
+            <path id="pathHome" fill-rule="evenodd"></path>
+        </svg>
+    </a>
+    
+    <a href="https://github.com/JingyaoWang666/JingyaoWang666.github.io/issues/10" target="_blank" class="btn btn-invisible circle" title="Issue">
+        <svg class="octicon" width="16" height="16">
+            <path id="pathIssue" fill-rule="evenodd"></path>
+        </svg>
+    </a>
+    
+
+    <a class="btn btn-invisible circle" onclick="modeSwitch();" title="切换主题">
+        <svg class="octicon" width="16" height="16" >
+            <path id="themeSwitch" fill-rule="evenodd"></path>
+        </svg>
+    </a>
+
+</div>
+</div>
+    <div id="content">
+<div class="markdown-body" id="postBody"><h3>一、介绍</h3>
+<p>课程目标：掌握如何用智能体构建应用，是 AI 领域中最重要且最有价值的技能之一。<br>
+那些真正懂得如何构建智能体 AI 的人与效率较低的人之间的最大区别在于：能否推动有纪律的开发流程，特别是专注于<strong>评估与错误分析</strong>（evals and error analysis）的流程。</p>
+<p>本课程将详细解释这一点，并教你如何精通构建这些<strong>基于智能体的工作流</strong>。<br>
+<em>有趣的是，我以前也主要关注到LLM版本的迭代，但实际上workflow，或者说其工作方式、工作流程对LLM输出的优化作用不可忽视，甚至比版本迭代的作用还要大。</em></p>
+<h3>二、What is agentic AI?</h3>
+<p><a target="_blank" rel="noopener noreferrer" href="https://github.com/user-attachments/assets/e9b38913-256b-48b8-9cb2-c3524a862d5b"><img width="900" height="500" alt="Image" src="https://github.com/user-attachments/assets/e9b38913-256b-48b8-9cb2-c3524a862d5b" style="max-width: 100%; height: auto; max-height: 500px;"></a></p>
+<p>An agentic Al workflow：**指基于大语言模型（LLM）的应用程序执行多个步骤以完成任务的过程。**这就是这门课的核心讨论对象。<br>
+智能体AI工作流是一种基于大型语言模型的应用流程，它通过执行多个步骤来完成一个复杂任务。它与“零样本”工作流的核心区别在于其迭代性和分解性。</p>
+<blockquote>
+<p>工作流示例——撰写文章<br>
+写大纲： 让LLM先写出文章的大纲。<br>
+决定是否需要研究： 让另一个LLM判断是否需要进行网络搜索。<br>
+执行研究： 如果需要，调用网络搜索API，获取相关网页信息。<br>
+写初稿： 将下载的网页内容输入给LLM，让它撰写第一稿。<br>
+反思与修订： 让LLM反思初稿，决定哪些部分需要修改或补充更多研究。<br>
+人工审核（可选）： 在关键环节，可以让LLM请求人工审核，例如确认某些关键事实。<br>
+最终修订： 根据反馈或自我反思，对草稿进行最终修改。<br>
+虽然这种迭代式的工作流可能花费更长时间，但它能产出质量更高、更全面的工作成果</p>
+</blockquote>
+<h3>三、自主程度degrees of autonomy</h3>
+<p>Idea：使用“Agentic”作为形容词，而非名词。这允许我们说一个系统“具有某种程度的智能体特性”，而不是纠结于它是否“足够自主”才能被称为“智能体”。与其去争论哪些工作算是智能体，哪些不算“真正的智能体“，不如让我们承认不同系统在主动性方面的不同程度。</p>
+<p>Less autonomous（低自主性）<br>
+所有步骤都是预先设定好的，所有工具调用都是硬编码的（Hard-coded），由人类工程师在代码中固定；其中主要自主性体现在语言模型生成的文本上。</p>
+<p>案例</p>
+<blockquote>
+<p>你告诉 LLM：“写一篇关于黑洞的论文”<br>
+LLM → 写出搜索关键词<br>
+去网页搜<br>
+抓取网页内容<br>
+LLM 把这些内容整合成文章<br>
+这就像你指挥一个“听话但不会动脑”的助手：你得一步步告诉它做什么、什么时候查资料、怎么整理。AI 只负责“写”，其他事都得你来操心。</p>
+</blockquote>
+<p>More autonomous（高自主性）<br>
+代理能自主做出大量决策；能够动态地决定要执行的步骤顺序；甚至可以创建新的、可执行的工具（函数）来完成任务。</p>
+<p>案例</p>
+<blockquote>
+<p>你告诉 LLM：“写一篇关于黑洞的论文”<br>
+LLM 自己决定：先“web search”查资料 → 并且能调用“news”和“arXiv”等工具，找最新科研动态<br>
+找到结果后，它自己判断：“我要选5个最好的来源” → 调用“web fetch” + “pdf to text”工具提取内容<br>
+然后它写初稿 → 再自己反思：“这个段落逻辑不够强，数据没引用清楚” → 主动改进草稿<br>
+最后输出高质量论文！</p>
+</blockquote>
+<p><a target="_blank" rel="noopener noreferrer" href="https://github.com/user-attachments/assets/6f780d75-e191-4dbc-847d-27ed7512397a"><img width="1776" height="608" alt="Image" src="https://github.com/user-attachments/assets/6f780d75-e191-4dbc-847d-27ed7512397a" style="max-width: 100%; height: auto; max-height: 608px;"></a></p>
+<h3>四、benefits of agentic AI</h3>
+<ol>
+<li>性能飞跃（Much Better Performance）</li>
+<li>并行加速（Faster than Humans because of Parallelization）</li>
+<li>模块化设计（Modular: Can Add/Update/Swap Components）</li>
+</ol>
+<p>模块化设计的案例：</p>
+<blockquote>
+<p>智能体工作流是高度模块化的，允许开发者自由地添加、更新工具或替换模型。<br>
+替换工具： 例如，在“网络搜索”这个环节，可以轻松地将默认的搜索引擎替换为 Serper、Bing、Dr. Google 或专门为 AI 设计的工具。<br>
+切换功能： 可以将通用的“web search”替换为“news search”，以便获取最新的科学突破资讯。<br>
+优化模型： 不必在所有步骤中使用同一个 LLM。可以根据不同步骤的需求，尝试不同的模型提供商，选择在该步骤表现最佳的模型，从而优化整个系统的表现。</p>
+</blockquote>
+<p>agentic-ai一种让 AI Agent 根据明确或动态的任务目标，自主调用工具、访问数据库、执行步骤并完成任务的工作模式。<br>
+不同于传统“输入-输出”的简单问答，它强调多步骤规划、工具使用、状态更新与决策能力。</p>
+<p><strong>代理型AI适合哪些任务？ (What tasks is agentic AI suited to?)</strong><br>
+这是一个从“容易”到“困难”的连续光谱</p>
+<p>较易实现的任务 (Easier)</p>
+<blockquote>
+<p>清晰、逐步的流程 (Clear, step-by-step process): 有明确的执行步骤。<br>
+标准程序 (Standard procedures to follow): 企业已有成熟的操作手册。<br>
+纯文本资产 (Text assets only): 输入和输出均为文本，因为LLM擅长处理文本。</p>
+</blockquote>
+<p>较难实现的任务 (Harder)</p>
+<blockquote>
+<p>步骤未知 (Steps not known ahead of time): 任务需求在执行前不确定，需要代理动态规划。<br>
+边执行边解决 (Plan/solve as you go): 代理需要在过程中进行推理和决策。<br>
+多模态输入 (Multimodal: sound, vision): 需要处理图像、声音等非文本</p>
+</blockquote>
+<p>agentic-ai 是将人类工作流程自动化的新范式 —— 它不是取代人，而是把人从重复性、规则性强的任务中解放出来，专注于更高阶的决策与创造。</p>
+<h3>五、任务分解Task decomposition: Identifying the steps in a workflow</h3>
+<p>任务分解是构建代理型AI工作流的关键技能。其核心思想是：</p>
+<blockquote>
+<p>观察人类行为: 思考如果一个人类要完成这个任务，他会怎么做？<br>
+拆解步骤: 将整个任务拆解成多个独立的、清晰的子步骤。<br>
+评估可行性: 对每个子步骤，思考它是否能用大型语言模型（LLM）或某个工具（如API、函数调用）来实现。<br>
+迭代优化: 如果初步分解的效果不理想，可以进一步细化某个步骤，将其拆分成更小的子步骤，直到达到满意的性能。</p>
+</blockquote>
+<p><a target="_blank" rel="noopener noreferrer" href="https://github.com/user-attachments/assets/36bfbefe-d4fc-4bd4-9c38-323e73ec2f43"><img width="1200" height="700" alt="Image" src="https://github.com/user-attachments/assets/36bfbefe-d4fc-4bd4-9c38-323e73ec2f43" style="max-width: 100%; height: auto; max-height: 700px;"></a></p>
+<p>Idea: 通常我们会先想到一个初步的工作流程，对于拆解出的每个步骤，问自己：这一步能不能用LLM或者工具模块实现？（当然关键核对等也可以human in the loop）或者说整体完成的怎么样？不行我们就进一步拆分。</p>
+<p><strong>工作流设计原则</strong><br>
+从简单开始：先做 1-3 步的原型，再逐步扩展。<br>
+模块化设计：每个步骤应尽量独立、可复用。<br>
+容错与反馈：加入“检查”、“评审”步骤，避免错误累积。<br>
+持续迭代：没有一步到位的完美工作流，需不断优化。</p>
+<p><strong>关键技能</strong><br>
+任务分解能力: 能够清晰地识别和定义任务的各个离散步骤。<br>
+构件理解能力: 理解可用的模型和工具及其适用场景。<br>
+迭代优化能力: 不断测试、评估和改进工作流，直至达到预期性能。</p>
+<h3>六、Evaluation（evals）</h3>
+<p>能否进行严格、有纪律的评估（evals） 是区分一个团队或个人在构建智能体工作流时“做得好”与“做得差”的最大预测因素。评估能力对有效构建智能体工作流至关重要。<br>
+在构建智能体工作流前，很难预知所有可能出错的地方。<br>
+解决方案： 不要试图提前设计所有评估标准。最佳实践是先构建一个初步版本，然后手动检查其输出，寻找那些你希望它能做得更好的地方。</p>
+<p>评估指标分为量化指标（objective metric）和相对主观的指标，前者可以由代码完成，后者可以由LLM打分(Using LLM as a judge)。</p>
+<p><strong>评估的两大主要类型</strong><br>
+端到端评估 (End-to-end evals):衡量整个智能体最终输出的整体质量。 例如：评估一篇完整论文的最终得分。 2、组件级评估 (Component-level evals):衡量智能体工作流中单个步骤或组件的输出质量。 例如：评估第一步“提取关键信息”的准确性，或第二步“查找相关客户记录”的召回率。组件级评估是进行错误分析（error analysis）和优化工作流时的重要方法。</p>
+<h3>七、important agentic design pattern</h3>
+<p><strong>一、反思（reflection）</strong><br>
+核心概念： 让模型对自己的输出进行检查、评估和改进。<br>
+工作流程：<br>
+初始生成： 模型根据任务要求生成一个初步结果（如代码）。<br>
+自我评估/外部评估： 将该结果作为输入，再次提示同一个或另一个模型，要求其对结果进行批判性分析（如检查正确性、风格、效率，并给出改进建议）。<br>
+迭代优化： 将评估反馈（如“第5行有bug”或“单元测试失败”）提供给模型，让它基于反馈生成一个更好的版本。<br>
+循环往复： 此过程可以多次迭代，直到达到满意的质量。<br>
+关键点：<br>
+这是一种非常有效的性能提升技术，虽然不能保证100%完美，但能带来显著的性能提升。<br>
+“反思”可以由同一个模型完成，也可以引入一个专门扮演“审查者”角色的独立模型（即多智能体协作的雏形）。<br>
+评估标准可以是客观的（如代码是否能运行），也可以是主观的（如代码风格）。</p>
+<p><strong>二、工具使用（Tool Use）</strong><br>
+核心概念： 赋予语言模型调用外部工具或函数的能力，以扩展其功能边界。</p>
+<p>工作流程：<br>
+识别需求： 模型在处理任务时，判断需要调用哪个工具。<br>
+调用工具： 模型生成调用该工具的指令或参数。<br>
+执行与返回： 工具执行操作（如搜索网络、计算数学公式），并将结果返回给模型。<br>
+整合结果： 模型利用工具返回的结果来完成最终任务。<br>
+工具类型举例：<br>
+信息收集： Web search, Wikipedia, Database access.<br>
+分析计算： Code Execution, Wolfram Alpha, Bearly Code Interpreter.<br>
+生产力： Email, Calendar, Messaging.<br>
+图像处理： Image generation, Image captioning, OCR.<br>
+关键点： 工具使用极大地增强了模型的能力，使其不再局限于文本生成，而是能与现实世界互动并解决更广泛的问题。</p>
+<p><strong>三、规划（Planning）</strong><br>
+核心概念： 让模型自主决定完成一个复杂任务所需的步骤序列，而不是由开发者硬编码。</p>
+<p>工作流程：<br>
+任务理解： 模型接收一个复杂请求（如“生成一张女孩读书的图片，姿势与示例图中的男孩相同”）。<br>
+路径规划： 模型自动分解任务，决定需要调用哪些工具以及调用的顺序。<br>
+例如：先用 openpose 模型提取男孩的姿势 -&gt; 再用 google/vit 模型根据该姿势生成女孩的图片 -&gt; 接着用 vit-gpt2 模型描述图片 -&gt; 最后用 fastspeech 模型将描述转为语音。<br>
+执行： 按照规划的步骤依次执行。<br>
+关键点：</p>
+<p>这种方式比硬编码的流程更灵活，但控制难度更大，也更具实验性。<br>
+它允许模型在面对新任务时，自行构思解决方案，有时会产生令人惊喜的结果。</p>
+<p><strong>四、多智能体协作（Multi-agent collaboration）</strong></p>
+<p>核心概念： 雇佣多个具有不同专长的角色（智能体）协同工作，共同完成一个复杂项目。<br>
+工作流程：<br>
+角色分配： 为不同的智能体分配特定角色（如研究员、市场专员、编辑）。<br>
+分工合作： 各个智能体根据自己的角色和能力，执行相应的子任务。<br>
+沟通协调： 智能体之间相互沟通、传递信息，共同推进项目。</p>
+<p>关键点：<br>
+多智能体协作通常能产生比单个智能体更好的结果，尤其在处理复杂任务（如撰写人物传记、下棋）时。<br>
+研究表明，多智能体系统在多项任务上的表现优于单智能体系统。<br>
+其缺点是更难控制和调试，因为无法提前预知各个智能体的行为。</p>
+<p><em>其实这个有点像人之间的讨论，不同的人看问题的视角和思维方式有很大不同，所以多人讨论工作就能一定程度上提升工作质量。</em></p></div>
+<div style="font-size:small;margin-top:8px;float:right;"></div>
+
+<button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>
+<div class="comments" id="comments"></div>
+
+</div>
+    <div id="footer"><div id="footer1">Copyright © <span id="copyrightYear"></span> <a href="https://JingyaoWang666.github.io">Pianist on the Ocean</a></div>
+<div id="footer2">
+    <span id="runday"></span><span>Powered by <a href="https://meekdai.com/Gmeek.html" target="_blank">Gmeek</a></span>
+</div>
+
+<script>
+var now=new Date();
+document.getElementById("copyrightYear").innerHTML=now.getFullYear();
+
+if(""!=""){
+    var startSite=new Date("");
+    var diff=now.getTime()-startSite.getTime();
+    var diffDay=Math.floor(diff/(1000*60*60*24));
+    document.getElementById("runday").innerHTML="网站运行"+diffDay+"天"+" • ";
+}
+</script></div>
+</body>
+<script>
+var IconList={'sun': 'M8 10.5a2.5 2.5 0 100-5 2.5 2.5 0 000 5zM8 12a4 4 0 100-8 4 4 0 000 8zM8 0a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0V.75A.75.75 0 018 0zm0 13a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0v-1.5A.75.75 0 018 13zM2.343 2.343a.75.75 0 011.061 0l1.06 1.061a.75.75 0 01-1.06 1.06l-1.06-1.06a.75.75 0 010-1.06zm9.193 9.193a.75.75 0 011.06 0l1.061 1.06a.75.75 0 01-1.06 1.061l-1.061-1.06a.75.75 0 010-1.061zM16 8a.75.75 0 01-.75.75h-1.5a.75.75 0 010-1.5h1.5A.75.75 0 0116 8zM3 8a.75.75 0 01-.75.75H.75a.75.75 0 010-1.5h1.5A.75.75 0 013 8zm10.657-5.657a.75.75 0 010 1.061l-1.061 1.06a.75.75 0 11-1.06-1.06l1.06-1.06a.75.75 0 011.06 0zm-9.193 9.193a.75.75 0 010 1.06l-1.06 1.061a.75.75 0 11-1.061-1.06l1.06-1.061a.75.75 0 011.061 0z', 'moon': 'M9.598 1.591a.75.75 0 01.785-.175 7 7 0 11-8.967 8.967.75.75 0 01.961-.96 5.5 5.5 0 007.046-7.046.75.75 0 01.175-.786zm1.616 1.945a7 7 0 01-7.678 7.678 5.5 5.5 0 107.678-7.678z', 'sync': 'M1.705 8.005a.75.75 0 0 1 .834.656 5.5 5.5 0 0 0 9.592 2.97l-1.204-1.204a.25.25 0 0 1 .177-.427h3.646a.25.25 0 0 1 .25.25v3.646a.25.25 0 0 1-.427.177l-1.38-1.38A7.002 7.002 0 0 1 1.05 8.84a.75.75 0 0 1 .656-.834ZM8 2.5a5.487 5.487 0 0 0-4.131 1.869l1.204 1.204A.25.25 0 0 1 4.896 6H1.25A.25.25 0 0 1 1 5.75V2.104a.25.25 0 0 1 .427-.177l1.38 1.38A7.002 7.002 0 0 1 14.95 7.16a.75.75 0 0 1-1.49.178A5.5 5.5 0 0 0 8 2.5Z', 'home': 'M6.906.664a1.749 1.749 0 0 1 2.187 0l5.25 4.2c.415.332.657.835.657 1.367v7.019A1.75 1.75 0 0 1 13.25 15h-3.5a.75.75 0 0 1-.75-.75V9H7v5.25a.75.75 0 0 1-.75.75h-3.5A1.75 1.75 0 0 1 1 13.25V6.23c0-.531.242-1.034.657-1.366l5.25-4.2Zm1.25 1.171a.25.25 0 0 0-.312 0l-5.25 4.2a.25.25 0 0 0-.094.196v7.019c0 .138.112.25.25.25H5.5V8.25a.75.75 0 0 1 .75-.75h3.5a.75.75 0 0 1 .75.75v5.25h2.75a.25.25 0 0 0 .25-.25V6.23a.25.25 0 0 0-.094-.195Z', 'github': 'M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z'};
+var utterancesLoad=0;
+
+let themeSettings={
+    "dark": ["dark","moon","#00f0ff","dark-blue"],
+    "light": ["light","sun","#ff5000","github-light"],
+    "auto": ["auto","sync","","preferred-color-scheme"]
+};
+function changeTheme(mode, icon, color, utheme){
+    document.documentElement.setAttribute("data-color-mode",mode);
+    document.getElementById("themeSwitch").setAttribute("d",value=IconList[icon]);
+    document.getElementById("themeSwitch").parentNode.style.color=color;
+    if(utterancesLoad==1){utterancesTheme(utheme);}
+}
+function modeSwitch(){
+    let currentMode=document.documentElement.getAttribute('data-color-mode');
+    let newMode = currentMode === "light" ? "dark" : currentMode === "dark" ? "auto" : "light";
+    localStorage.setItem("meek_theme", newMode);
+    if(themeSettings[newMode]){
+        changeTheme(...themeSettings[newMode]);
+    }
+}
+function utterancesTheme(theme){
+    const message={type:'set-theme',theme: theme};
+    const iframe=document.getElementsByClassName('utterances-frame')[0];
+    iframe.contentWindow.postMessage(message,'https://utteranc.es');
+}
+if(themeSettings[theme]){changeTheme(...themeSettings[theme]);}
+console.log("\n %c Gmeek last https://github.com/Meekdai/Gmeek \n","padding:5px 0;background:#02d81d;color:#fff");
+</script>
+
+<script>
+document.getElementById("pathHome").setAttribute("d",IconList["home"]);
+document.getElementById("pathIssue").setAttribute("d",IconList["github"]);
+
+
+
+function openComments(){
+    cm=document.getElementById("comments");
+    cmButton=document.getElementById("cmButton");
+    cmButton.innerHTML="loading";
+    span=document.createElement("span");
+    span.setAttribute("class","AnimatedEllipsis");
+    cmButton.appendChild(span);
+
+    script=document.createElement("script");
+    script.setAttribute("src","https://utteranc.es/client.js");
+    script.setAttribute("repo","JingyaoWang666/JingyaoWang666.github.io");
+    script.setAttribute("issue-term","title");
+    
+    if(localStorage.getItem("meek_theme")=="dark"){script.setAttribute("theme","dark-blue");}
+    else if(localStorage.getItem("meek_theme")=="light") {script.setAttribute("theme","github-light");}
+    else{script.setAttribute("theme","preferred-color-scheme");}
+    
+    script.setAttribute("crossorigin","anonymous");
+    script.setAttribute("async","");
+    cm.appendChild(script);
+
+    int=self.setInterval("iFrameLoading()",200);
+}
+
+function iFrameLoading(){
+    var utterances=document.getElementsByClassName('utterances');
+    if(utterances.length==1){
+        if(utterances[0].style.height!=""){
+            utterancesLoad=1;
+            int=window.clearInterval(int);
+            document.getElementById("cmButton").style.display="none";
+            console.log("utterances Load OK");
+        }
+    }
+}
+
+
+
+</script>
+
+
+</html>
