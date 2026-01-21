@@ -54,7 +54,7 @@ ___
 
 ___
 
-### 四、How to address problems you identify?
+### 四、怎么解决发现的问题？How to address problems you identify?
 
 <img width="750" height="430" alt="Image" src="https://github.com/user-attachments/assets/7c7244a6-03da-4c4e-8726-70bff3884ede" />
 
