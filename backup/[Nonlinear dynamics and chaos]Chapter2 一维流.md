@@ -16,7 +16,7 @@
 idea：在固定点（fixed point）x*处做泰勒展开，忽略超过一阶的项，得到小扰动η和f'(x*)的关系
 （从应用或者说工程师的角度出发，本课程往往就假设在我们需要做泰勒展开分析的时候，函数是足够光滑的，我们不去严格的讨论光滑相关的性质是否有。）
 
-<img width="5001022" height="325" alt="Image" src="https://github.com/user-attachments/assets/62cae6f4-1e0a-4d61-959d-c9efbe71a13b" />
+<img width="500" height="325" alt="Image" src="https://github.com/user-attachments/assets/62cae6f4-1e0a-4d61-959d-c9efbe71a13b" />
 
 <img width="490" height="210" alt="Image" src="https://github.com/user-attachments/assets/c484cdcc-2f1c-47d9-9a96-9da2718afa06" />
 
