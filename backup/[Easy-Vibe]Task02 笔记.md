@@ -44,3 +44,18 @@ IDE相当于一个工具箱，**AI IDE**中则内置LLM，帮助你进行编码�
 ___
 
 
+**二、基于Trae的AI IDE本地实战**
+
+
+补充知识：**React（现代前端框架）**
+
+
+<img width="580" height="535" alt="Image" src="https://github.com/user-attachments/assets/72b391b8-ad96-45a3-acad-7bffb40cb44f" />
+
+
+好像是：React是JavaScript编写的库（library，提供工具函数，按需使用），过去开发前端需要手动合作html、css、JavaScript，现在用React库的话主要用JavaScript就可以。
+
+
+
+
+
