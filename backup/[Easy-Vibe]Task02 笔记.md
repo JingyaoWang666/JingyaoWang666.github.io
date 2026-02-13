@@ -4,7 +4,7 @@
 
 - [ ] 本地开发环境搭建
 - [ ] IDE与AI IDE
-- [ ] 高效开发技巧
+- [ ] ai沟通技巧
 
 
 **一、IDE 与 AI IDE**
@@ -56,6 +56,30 @@ ___
 好像是：React是JavaScript编写的库（library，提供工具函数，按需使用），过去开发前端需要手动合作html、css、JavaScript，现在用React库的话主要用JavaScript就可以。
 
 
+补充知识：**Coding Plan**
 
+
+<img width="550" height="440" alt="Image" src="https://github.com/user-attachments/assets/b00f960e-6f70-41f8-b148-2772b49e470b" />
+
+
+
+___
+
+
+**三、沟通技巧：高效与ai对话**
+
+> 说清楚需求。比如描述目标/目的、大概需要哪几块内容（vibe）、告诉ai你的水平和限制、希望什么样的结果/输出 etc.
+> 
+> **逐步迭代优化**：至少目前来说，直接给ai一个极其复杂的要求往往结果不太好或新手不友好，可以像人类工程师一样，先做出简化原型，再迭代优化。
+> 
+> 对多模态LLM，可以用截图代替/补充不准确的口头描述
+> 
+> 找个样本给ai参考：比如让ai做个类似某某网站的网页
+> 
+
+
+
+
+<img width="600" height="265" alt="Image" src="https://github.com/user-attachments/assets/dc79f203-49e3-4dd9-9dd7-487004bb23fd" />
 
 
