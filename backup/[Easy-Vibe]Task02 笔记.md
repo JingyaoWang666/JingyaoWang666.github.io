@@ -2,9 +2,9 @@
 
 ### Task2 认识AI IDE 工具
 
-- [ ] 本地开发环境搭建
-- [ ] IDE与AI IDE
-- [ ] ai沟通技巧
+- [x] 本地开发环境搭建
+- [x] IDE与AI IDE
+- [x] ai沟通技巧
 
 
 **一、IDE 与 AI IDE**
