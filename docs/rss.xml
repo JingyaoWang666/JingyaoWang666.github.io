@@ -1,5 +1,26 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Pianist on the Ocean</title><link>https://JingyaoWang666.github.io</link><description>Follow your heart</description><copyright>Pianist on the Ocean</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://JingyaoWang666.github.io</link></image><lastBuildDate>Mon, 16 Feb 2026 05:22:55 +0000</lastBuildDate><managingEditor>Pianist on the Ocean</managingEditor><ttl>60</ttl><webMaster>Pianist on the Ocean</webMaster><item><title>[Easy-Vibe]Task2.5 笔记</title><link>https://JingyaoWang666.github.io/post/%5BEasy-Vibe%5DTask2.5%20-bi-ji.html</link><description>&gt; 学习资料参考：https://datawhalechina.github.io/easy-vibe/
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Pianist on the Ocean</title><link>https://JingyaoWang666.github.io</link><description>Follow your heart</description><copyright>Pianist on the Ocean</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://JingyaoWang666.github.io</link></image><lastBuildDate>Mon, 16 Feb 2026 10:12:32 +0000</lastBuildDate><managingEditor>Pianist on the Ocean</managingEditor><ttl>60</ttl><webMaster>Pianist on the Ocean</webMaster><item><title>[Easy-Vibe]Task03 笔记</title><link>https://JingyaoWang666.github.io/post/%5BEasy-Vibe%5DTask03%20-bi-ji.html</link><description>&gt; 学习资料参考：https://github.com/datawhalechina/easy-vibe
+
+
+### Task03 动手做出原型
+
+- [ ] 需求分析
+- [ ] 单页验证
+- [ ] 多页面应用
+- [ ] 美化完善
+
+
+**一、CLI AI 编程工具**
+
+&lt;img width='550' height='410' alt='Image' src='https://github.com/user-attachments/assets/c50b4f04-db23-46e2-9d6f-bfa9bd00430b' /&gt;
+
+
+好处：更长的工作时间和上下文窗口、响应速度更快、更聪明稳定
+
+推荐工具：
+
+&gt; Codex 使用 GPT-5，在整体能力上更强；
+&gt; Claude Code 通过 GLM 4.6 转发 API，整体体验接近 Claude 4，但价格更便宜。</description><guid isPermaLink="true">https://JingyaoWang666.github.io/post/%5BEasy-Vibe%5DTask03%20-bi-ji.html</guid><pubDate>Mon, 16 Feb 2026 10:12:04 +0000</pubDate></item><item><title>[Easy-Vibe]Task2.5 笔记</title><link>https://JingyaoWang666.github.io/post/%5BEasy-Vibe%5DTask2.5%20-bi-ji.html</link><description>&gt; 学习资料参考：https://datawhalechina.github.io/easy-vibe/
 &gt; 原文地址：https://datawhalechina.github.io/easy-vibe/zh-cn/stage-1/1.0-finding-great-idea/
 &gt; 非常值得看！
 
