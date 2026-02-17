@@ -15,8 +15,7 @@
 
 ### Task03 动手做出原型
 
-- [ ] 需求分析
-- [ ] 单页验证
+- [ ] CLI AI 
 - [ ] 多页面应用
 - [ ] 美化完善
 
@@ -38,8 +37,7 @@
 
 ### Task03 动手做出原型
 
-- [ ] 需求分析
-- [ ] 单页验证
+- [ ] CLI AI 
 - [ ] 多页面应用
 - [ ] 美化完善
 
@@ -120,8 +118,7 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 </blockquote>
 <h3>Task03 动手做出原型</h3>
 <ul class="contains-task-list">
-<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> 需求分析</li>
-<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> 单页验证</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> CLI AI</li>
 <li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> 多页面应用</li>
 <li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" aria-label="Incomplete task"> 美化完善</li>
 </ul>
@@ -133,10 +130,22 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 <p>Codex 使用 GPT-5，在整体能力上更强；<br>
 Claude Code 通过 GLM 4.6 转发 API，整体体验接近 Claude 4，但价格更便宜。（由于直接使用官方 Claude Code 的成本往往非常高（如下图所示），我们会转而使用兼容 Claude Code 协议、但基于其他大模型的 API 平台。）</p>
 </blockquote>
+<p><a target="_blank" rel="noopener noreferrer" href="https://github.com/user-attachments/assets/0785a38a-a949-4f45-8e31-ae191b40a0cc"><img width="558" height="286" alt="Image" src="https://github.com/user-attachments/assets/0785a38a-a949-4f45-8e31-ae191b40a0cc" style="max-width: 100%; height: auto; max-height: 286px;"></a></p>
+<p><strong>需求文档</strong>：抽象idea的具体执行文档。可以自己想也可以ai辅助扩充。之后每次让 AI 写项目时，只需要让它“参考这份文档”，而不是每次都重打一遍长提示。也可以在迭代中不断完善这份文档，让后续项目直接受益。</p>
 <hr>
+<p><strong>二、搭建原型</strong></p>
+<p>需求分析--&gt;单页验证--&gt;多页面扩展--&gt;迭代美化</p>
+<blockquote>
 <p>先问问题：调查业务实际需求<br>
 找到痛点<br>
-收敛范围：不是功能越全越好，先解决主要矛盾</p></div>
+收敛范围：不是功能越全越好，先解决主要矛盾</p>
+</blockquote>
+<p><strong>技巧：</strong></p>
+<ol>
+<li>写提示词的提示词——当你只有大白话的、初步的想法时，先用AI帮你补充验证想要的实现细节，生成给CLI AI工具的提示词，在你确认修改后交给CLI AI去生成代码。</li>
+<li>点滴积累知识——不需要一次性全部搞懂AI的操作（比如debug）。可以每次只关注一两个点，久而久之，你会逐渐看懂越来越多代码，就像积累英语词汇一样。</li>
+<li>测试数据——在测试全流程的时候，可以让 AI 生成成套的测试数据，并在界面上搭建便于测试的快速数据入口，方便我们测试功能都能正常跑通。比如在测试环境中让ai搞一个测试入口，把ai给的一套数据直接粘贴进去，就能看到流程的输出是否合理。</li>
+</ol></div>
 <div style="font-size:small;margin-top:8px;float:right;"></div>
 
 <button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>
