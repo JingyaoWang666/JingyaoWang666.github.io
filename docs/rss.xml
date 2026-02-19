@@ -1,5 +1,14 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Pianist on the Ocean</title><link>https://JingyaoWang666.github.io</link><description>Follow your heart</description><copyright>Pianist on the Ocean</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://JingyaoWang666.github.io</link></image><lastBuildDate>Tue, 17 Feb 2026 17:01:37 +0000</lastBuildDate><managingEditor>Pianist on the Ocean</managingEditor><ttl>60</ttl><webMaster>Pianist on the Ocean</webMaster><item><title>[Easy-Vibe]Task03 笔记</title><link>https://JingyaoWang666.github.io/post/%5BEasy-Vibe%5DTask03%20-bi-ji.html</link><description>&gt; 学习资料参考：https://github.com/datawhalechina/easy-vibe
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Pianist on the Ocean</title><link>https://JingyaoWang666.github.io</link><description>Follow your heart</description><copyright>Pianist on the Ocean</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://JingyaoWang666.github.io</link></image><lastBuildDate>Thu, 19 Feb 2026 13:08:10 +0000</lastBuildDate><managingEditor>Pianist on the Ocean</managingEditor><ttl>60</ttl><webMaster>Pianist on the Ocean</webMaster><item><title>[Claude Code]笔记</title><link>https://JingyaoWang666.github.io/post/%5BClaude%20Code%5D-bi-ji.html</link><description>&gt; 学习讲座参考：https://bit.ly/4ooS2zI
+
+
+**一、What is Claude Code？—— a highly agentic coding assistant**
+
+
+&lt;img width='1150' height='500' alt='Image' src='https://github.com/user-attachments/assets/76180f75-6187-4430-803f-3b0751f91bd7' /&gt;
+
+
+claude code通过一个轻量级框架（a very lightweight harness），使大模型更加智能（或者说把LLM变成一个更好的coding assistant）。</description><guid isPermaLink="true">https://JingyaoWang666.github.io/post/%5BClaude%20Code%5D-bi-ji.html</guid><pubDate>Thu, 19 Feb 2026 13:07:42 +0000</pubDate></item><item><title>[Easy-Vibe]Task03 笔记</title><link>https://JingyaoWang666.github.io/post/%5BEasy-Vibe%5DTask03%20-bi-ji.html</link><description>&gt; 学习资料参考：https://github.com/datawhalechina/easy-vibe
 
 
 ### Task03 动手做出原型
