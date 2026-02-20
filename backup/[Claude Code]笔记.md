@@ -109,8 +109,21 @@ ___
 
 
 
+**三、testing, error debuging and code refactoring**
 
 
+e.g. instead of直接把错误截图并简单描述给claude code，我们明确要求claude**编写test来系统化地检查问题**。
+
+
+
+<img width="795" height="315" alt="Image" src="https://github.com/user-attachments/assets/3a33e044-8369-4eb1-b01f-ae04e8361906" />
+
+
+
+
+（借助task工具）同时使用多个sub-agent工作in parallel
+ 
+e.g.
 
 
 
