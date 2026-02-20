@@ -84,3 +84,40 @@ ___
 
 
 
+
+**三、adding features**
+
+
+<img width="750" height="280" alt="Image" src="https://github.com/user-attachments/assets/dcd628b7-e205-4073-97ac-fcebca6cd008" />
+
+
+
+
+**重要技巧：**
+
+> 1. @+文档路径：向claude code指明特定文档
+> 2. shift+tab  shift+tab：plan mode。做复杂工作时，我们总是建议先打开plan模式。
+> 3. 图像理解能力：美化UI的时候，可以截图给claude code看（Alt+v to paste images）
+> 4.另：输入时如果想换行，可以先打slash再打回车。
+> 5. add MCP：比如MCP Playwright
+
+
+
+
+___
+___
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
