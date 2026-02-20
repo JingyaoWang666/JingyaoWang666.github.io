@@ -156,26 +156,55 @@ ___
 **五、adding multiple features simultaneously**
 
 
+claude code可以同时在多个文件夹中并行（可以在IDE中打开多个终端运行claude code）。使用git worktree来记录版本，最后再让claude code做git merge并处理可能出现的冲突。
+
+
+> 详见：https://www.bilibili.com/video/BV176t2zSEpr?spm_id_from=333.788.videopod.sections&vd_source=fb1b04b15c12d995169a2dfc127925e3&p=6
 
 
 
 
+___
+___
+
+
+
+**六、exploring github integration and hooks**
+
+claude code除了在终端，还可以集成进github的工作流。
+
+
+> 详见：https://www.bilibili.com/video/BV176t2zSEpr?spm_id_from=333.788.videopod.sections&vd_source=fb1b04b15c12d995169a2dfc127925e3&p=7
 
 
 
 
+<img width="950" height="535" alt="Image" src="https://github.com/user-attachments/assets/9e3faac5-a0c0-455e-92fc-8ad1bfba3e66" />
 
 
 
 
+一个使用post tool hook的有趣例子：调用完阅读文档的工具后，让计算机发出声音（用say命令）“All done. ”
+
+
+
+___
+___
+
+
+**七、refactoring a jupyter notebook and creating a dashboard**
+
+使用claude code把一个有点混乱的Jupyter notebook，变成一个整洁的notebook和好的可视化网页。
+
+
+> 详见：https://www.bilibili.com/video/BV176t2zSEpr?spm_id_from=333.788.player.switch&vd_source=fb1b04b15c12d995169a2dfc127925e3&p=8
 
 
 
 
+___
+___
 
 
 
-
-
-
-
+八、
