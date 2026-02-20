@@ -39,9 +39,48 @@ claude code使用叫做agentic search的技术，在你的代码库中寻找特�
 
 
 ___
+___
 
 
 
+**二、setup and codebase understanding**
+
+claude code是一个出色的工程师，也是一个甚至更好的解释者（explainer）。使用claude code帮你快速上手codebase、dataset等，让它向你解释。
+
+
+在使用claude code时，**建议第一件事是运行命令/init**（Initialize a new CLAUD.md file with codebase documentation）。CLAUD.md is mission critical，它为claude引入记忆功能，里面存储所有你想让claude在每次工作于这个codebas时，所拥有的**长期记忆**。
+
+
+<img width="600" height="265" alt="Image" src="https://github.com/user-attachments/assets/e508053b-0608-4ce8-b597-db4fc979d744" />
+
+
+
+
+如果在IDE（里的终端）比如VS code中使用claude code，可以用**命令/ide**获得更好的体验。
+
+想要改变CLAUDE.md，可以直接修改，也可以**使用#来添加内容**（此时还可以选择添加到三种CLAUDE.md中的哪一种）。
+
+e.g.
+
+<img width="575" height="195" alt="Image" src="https://github.com/user-attachments/assets/aa098330-9413-4b02-934a-9723b7a063b9" />
+
+
+
+
+**其他有用的命令：**
+
+> /help：show help and available commands
+> /clear：clear up conversation history and free up context
+> /compact：clear conversation history but keep a summary in context
+> esc键：中断当前进程
+
+
+另：claude code对与**git**合作的良好支持，比如commit等工作可以直接提示claude code去做，而不用手写git 命令。
+
+
+
+___
+___
 
 
 
