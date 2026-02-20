@@ -1,5 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Pianist on the Ocean</title><link>https://JingyaoWang666.github.io</link><description>Follow your heart</description><copyright>Pianist on the Ocean</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://JingyaoWang666.github.io</link></image><lastBuildDate>Thu, 19 Feb 2026 13:08:10 +0000</lastBuildDate><managingEditor>Pianist on the Ocean</managingEditor><ttl>60</ttl><webMaster>Pianist on the Ocean</webMaster><item><title>[Claude Code]笔记</title><link>https://JingyaoWang666.github.io/post/%5BClaude%20Code%5D-bi-ji.html</link><description>&gt; 学习讲座参考：https://bit.ly/4ooS2zI
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Pianist on the Ocean</title><link>https://JingyaoWang666.github.io</link><description>Follow your heart</description><copyright>Pianist on the Ocean</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://JingyaoWang666.github.io</link></image><lastBuildDate>Fri, 20 Feb 2026 05:33:07 +0000</lastBuildDate><managingEditor>Pianist on the Ocean</managingEditor><ttl>60</ttl><webMaster>Pianist on the Ocean</webMaster><item><title>[Insight-Hub]《Something-big-is-happening》</title><link>https://JingyaoWang666.github.io/post/%5BInsight-Hub%5D%E3%80%8ASomething-big-is-happening%E3%80%8B.html</link><description>&gt; 原文链接：https://shumer.dev/something-big-is-happening
+
+
+### What you should actually do:
+
+1. Start using AI seriously, not just as a search engine.
+付费订阅的最前沿AI模型，比免费模型要强很多（请想想现在ai发展的巨大速度）。</description><guid isPermaLink="true">https://JingyaoWang666.github.io/post/%5BInsight-Hub%5D%E3%80%8ASomething-big-is-happening%E3%80%8B.html</guid><pubDate>Fri, 20 Feb 2026 05:32:44 +0000</pubDate></item><item><title>[Claude Code]笔记</title><link>https://JingyaoWang666.github.io/post/%5BClaude%20Code%5D-bi-ji.html</link><description>&gt; 学习讲座参考：https://bit.ly/4ooS2zI
 
 
 **一、What is Claude Code？—— a highly agentic coding assistant**
