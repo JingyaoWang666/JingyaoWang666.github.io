@@ -121,9 +121,36 @@ e.g. instead of直接把错误截图并简单描述给claude code，我们明确
 
 
 
+
+
+
+
+
+
 （借助task工具）同时使用多个sub-agent工作in parallel
  
 e.g.
+
+<img width="815" height="535" alt="Image" src="https://github.com/user-attachments/assets/a22236bf-3007-48bf-8fcd-dcdf3ad9469f" />
+
+
+
+
+
+
+
+
+**
+
+> 流程总结：可以先prompt用多个sub-agent brainstorm approaches，然后开启plan mode针对更好的approach制定详细的计划，然后再开始edit代码等工作。
+
+**
+
+
+
+
+___
+___
 
 
 
