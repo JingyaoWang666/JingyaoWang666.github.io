@@ -109,7 +109,7 @@ ___
 
 
 
-**三、testing, error debuging and code refactoring**
+**四、testing, error debuging and code refactoring**
 
 
 e.g. instead of直接把错误截图并简单描述给claude code，我们明确要求claude**编写test来系统化地检查问题**。
@@ -151,6 +151,24 @@ e.g.
 
 ___
 ___
+
+
+**五、adding multiple features simultaneously**
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
