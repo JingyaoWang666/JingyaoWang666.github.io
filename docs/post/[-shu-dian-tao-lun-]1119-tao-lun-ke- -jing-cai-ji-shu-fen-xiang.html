@@ -87,7 +87,7 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 <p><strong>1</strong>.看到报错或警告时，我们可以在AMD社区，输入错误号，然后看别人的解决方案，来提升系统。</p>
 <p><strong>2</strong>.查看时序报告。可以看到关键路径等信息，从而给我们指出哪些地方需要优化。（就在project summary的timing部分）<br>
 打开implemented timing report ，可以看到更详细的信息</p>
-<p><a target="_blank" rel="noopener noreferrer" href="https://github.com/user-attachments/assets/46371441-f0b4-4ba9-bf47-207f6540b57f"><img width="700" height="176" alt="Image" src="https://github.com/user-attachments/assets/46371441-f0b4-4ba9-bf47-207f6540b57f" style="max-width: 100%; height: auto; max-height: 176px;"></a></p>
+<p><a target="_blank" rel="noopener noreferrer" href="https://github.com/user-attachments/assets/46371441-f0b4-4ba9-bf47-207f6540b57f"><img width="700" height="176" alt="Image" src="https://github.com/user-attachments/assets/46371441-f0b4-4ba9-bf47-207f6540b57f" style="max-width: 100%; height: auto; max-height: 176px;; aspect-ratio: 700 / 176; background-color: var(--bgColor-muted); border-radius: 6px; display: block" class="js-gh-image-fallback"></a></p>
 <p>比如上图中，WNS指建立时间的检查，如果为正就时序收敛，建立时间的Slack (裕量)充足，如果为负就没收敛，需要开发者更改比如加流水线之类的，或者降低时钟频率等；WHS对应保持时间，这个一般都不用用户改，因为如果不满足EDA工具很好解决，自动加几个缓冲器或者绕个路什么的就解决了。WPWS叫做脉宽裕量，因为我们知道数字电路中触发器、RAM这些元件它对时钟的脉冲长度也是有要求的，不能太短，那么这个指标就是在检查时钟质量，是不是超频/时钟歪斜/占空比不当之类的。</p>
 <p><strong>3</strong>.资源使用查看。</p>
 <p><strong>4</strong>.利用RTL级原理图，查看和梳理模块之间的关系。<br>
