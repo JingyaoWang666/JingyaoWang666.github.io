@@ -1,1 +1,0 @@
-[file:///C:/Users/Lenovo/Desktop/笔记/1130Verilog培训讲座.pdf](url)
