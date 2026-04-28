@@ -1,2 +1,121 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Pianist on the Ocean</title><link>https://JingyaoWang666.github.io</link><description>Follow your heart</description><copyright>Pianist on the Ocean</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://JingyaoWang666.github.io</link></image><lastBuildDate>Mon, 27 Apr 2026 17:25:16 +0000</lastBuildDate><managingEditor>Pianist on the Ocean</managingEditor><ttl>60</ttl><webMaster>Pianist on the Ocean</webMaster></channel></rss>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Pianist on the Ocean</title><link>https://JingyaoWang666.github.io</link><description>Follow your heart</description><copyright>Pianist on the Ocean</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://JingyaoWang666.github.io</link></image><lastBuildDate>Tue, 28 Apr 2026 17:49:09 +0000</lastBuildDate><managingEditor>Pianist on the Ocean</managingEditor><ttl>60</ttl><webMaster>Pianist on the Ocean</webMaster><item><title>[ROS2] GYH入门21讲--笔记二</title><link>https://JingyaoWang666.github.io/post/%5BROS2%5D%20GYH-ru-men-21-jiang----bi-ji-er.html</link><description>[ROS2学习笔记（二）.pdf](https://github.com/user-attachments/files/25708431/ROS2.pdf)。</description><guid isPermaLink="true">https://JingyaoWang666.github.io/post/%5BROS2%5D%20GYH-ru-men-21-jiang----bi-ji-er.html</guid><pubDate>Tue, 03 Mar 2026 07:22:19 +0000</pubDate></item><item><title>[ROS2] GYH入门21讲--笔记一</title><link>https://JingyaoWang666.github.io/post/%5BROS2%5D%20GYH-ru-men-21-jiang----bi-ji-yi.html</link><description>[ROS2学习笔记（一）.pdf](https://github.com/user-attachments/files/25683715/ROS2.pdf)。</description><guid isPermaLink="true">https://JingyaoWang666.github.io/post/%5BROS2%5D%20GYH-ru-men-21-jiang----bi-ji-yi.html</guid><pubDate>Mon, 02 Mar 2026 12:20:02 +0000</pubDate></item><item><title>[Insight-Hub]《Something-big-is-happening》</title><link>https://JingyaoWang666.github.io/post/%5BInsight-Hub%5D%E3%80%8ASomething-big-is-happening%E3%80%8B.html</link><description>&gt; 原文链接：https://shumer.dev/something-big-is-happening
+
+
+### What you should actually do:
+
+1. Start using AI seriously, not just as a search engine.
+付费订阅的最前沿AI模型，比免费模型要强很多（请想想现在ai发展的巨大速度）。</description><guid isPermaLink="true">https://JingyaoWang666.github.io/post/%5BInsight-Hub%5D%E3%80%8ASomething-big-is-happening%E3%80%8B.html</guid><pubDate>Fri, 20 Feb 2026 05:32:44 +0000</pubDate></item><item><title>[Claude Code]笔记</title><link>https://JingyaoWang666.github.io/post/%5BClaude%20Code%5D-bi-ji.html</link><description>&gt; 学习讲座参考：https://bit.ly/4ooS2zI
+
+
+**一、What is Claude Code？—— a highly agentic coding assistant**
+
+
+&lt;img width='1150' height='500' alt='Image' src='https://github.com/user-attachments/assets/76180f75-6187-4430-803f-3b0751f91bd7' /&gt;
+
+
+claude code通过一个轻量级框架（a very lightweight harness），使大模型更加智能（或者说把LLM变成一个更好的coding assistant）。</description><guid isPermaLink="true">https://JingyaoWang666.github.io/post/%5BClaude%20Code%5D-bi-ji.html</guid><pubDate>Thu, 19 Feb 2026 13:07:42 +0000</pubDate></item><item><title>[Easy-Vibe]Task03 笔记</title><link>https://JingyaoWang666.github.io/post/%5BEasy-Vibe%5DTask03%20-bi-ji.html</link><description>&gt; 学习资料参考：https://github.com/datawhalechina/easy-vibe
+
+
+### Task03 动手做出原型
+
+- [x] CLI AI 
+- [ ] 多页面应用
+- [ ] 美化完善
+
+
+**一、CLI AI 编程工具**
+
+&lt;img width='550' height='410' alt='Image' src='https://github.com/user-attachments/assets/c50b4f04-db23-46e2-9d6f-bfa9bd00430b' /&gt;
+
+
+好处：更长的工作时间和上下文窗口、响应速度更快、更聪明稳定
+
+推荐工具：
+
+&gt; Codex 使用 GPT-5，在整体能力上更强；
+&gt; Claude Code 通过 GLM 4.6 转发 API，整体体验接近 Claude 4，但价格更便宜。</description><guid isPermaLink="true">https://JingyaoWang666.github.io/post/%5BEasy-Vibe%5DTask03%20-bi-ji.html</guid><pubDate>Mon, 16 Feb 2026 10:12:04 +0000</pubDate></item><item><title>[Easy-Vibe]Task2.5 笔记</title><link>https://JingyaoWang666.github.io/post/%5BEasy-Vibe%5DTask2.5%20-bi-ji.html</link><description>&gt; 学习资料参考：https://datawhalechina.github.io/easy-vibe/
+&gt; 原文地址：https://datawhalechina.github.io/easy-vibe/zh-cn/stage-1/1.0-finding-great-idea/
+&gt; 非常值得看！
+
+### Task2.5 找到好点子
+
+- [ ] 找到好点子
+
+
+
+**寻找用户需求**
+
+&gt; 笔者私以为，时间是很宝贵的，既然做，我们就做到最好，不然为什么不去玩呢？作为责任，笔者也会竭尽全力，支持你做到最好。</description><guid isPermaLink="true">https://JingyaoWang666.github.io/post/%5BEasy-Vibe%5DTask2.5%20-bi-ji.html</guid><pubDate>Mon, 16 Feb 2026 05:22:30 +0000</pubDate></item><item><title>[LLM]Karpathy《deep dive into LLM》视频笔记</title><link>https://JingyaoWang666.github.io/post/%5BLLM%5DKarpathy%E3%80%8Adeep%20dive%20into%20LLM%E3%80%8B-shi-pin-bi-ji.html</link><description>&gt; 笔记来源：b站zsj_mgd
+&gt; 讲座链接：【【1080P】安德烈·卡帕西：深入探索像ChatGPT这样的大语言模型｜Andrej Karpathy】 https://www.bilibili.com/video/BV16cNEeXEer/?share_source=copy_web&amp;vd_source=c58c703264aea43ba72b2a5121a69751
+
+
+
+&lt;img width='8250' height='8186' alt='Image' src='https://github.com/user-attachments/assets/93ca2488-8e5d-4919-8c4e-ddaaaba04bb0' /&gt;。</description><guid isPermaLink="true">https://JingyaoWang666.github.io/post/%5BLLM%5DKarpathy%E3%80%8Adeep%20dive%20into%20LLM%E3%80%8B-shi-pin-bi-ji.html</guid><pubDate>Wed, 11 Feb 2026 04:28:32 +0000</pubDate></item><item><title>[Easy-Vibe]Task02 笔记</title><link>https://JingyaoWang666.github.io/post/%5BEasy-Vibe%5DTask02%20-bi-ji.html</link><description>&gt; 学习资料参考https://datawhalechina.github.io/easy-vibe/
+
+### Task2 认识AI IDE 工具
+
+- [x] 本地开发环境搭建
+- [x] IDE与AI IDE
+- [x] ai沟通技巧
+
+
+**一、IDE 与 AI IDE**
+
+**IDE** (Integrated Development Environment)的核心价值在于集成。</description><guid isPermaLink="true">https://JingyaoWang666.github.io/post/%5BEasy-Vibe%5DTask02%20-bi-ji.html</guid><pubDate>Wed, 11 Feb 2026 02:31:54 +0000</pubDate></item><item><title>[Easy-Vibe]Task01 笔记</title><link>https://JingyaoWang666.github.io/post/%5BEasy-Vibe%5DTask01%20-bi-ji.html</link><description>&gt; 学习资料参考：https://github.com/datawhalechina/easy-vibe
+
+_完成比完美更重要_
+
+### 初级一：AI时代，会说话就会编程
+
+- [x] 对话式ai编程
+- [x] 小游戏
+
+
+**一、vibe coding工具**
+在本课程中使用z.ai（智谱大模型），其他vibe coding工具见下图：
+
+&lt;img width='550' height='550' alt='Image' src='https://github.com/user-attachments/assets/d9e8f5a3-e3f3-4ee3-9a66-eb1b379bbda1' /&gt;
+
+
+目前来看，ai在完成小而清晰的项目开发任务上表现良好，但大型工程涉及接后端、连数据库、整合第三方服务，还牵涉权限、安全、并发和大量业务规则，目标是交付一整套与现有业务深度打通的系统，而不是一页网页。</description><guid isPermaLink="true">https://JingyaoWang666.github.io/post/%5BEasy-Vibe%5DTask01%20-bi-ji.html</guid><pubDate>Tue, 10 Feb 2026 04:20:28 +0000</pubDate></item><item><title>[Nonlinear dynamics and chaos]Chapter2 一维流</title><link>https://JingyaoWang666.github.io/post/%5BNonlinear%20dynamics%20and%20chaos%5DChapter2%20-yi-wei-liu.html</link><description>&lt;img width='490' height='105' alt='Image' src='https://github.com/user-attachments/assets/8f2d28d8-3dad-4635-a0ff-7253bd6f8822' /&gt;
+
+### 几何的思维方式
+
+**1.将微分方程表示成向量场**
+
+&lt;img width='652' height='274' alt='Image' src='https://github.com/user-attachments/assets/785a9165-fee1-4e50-8d75-32dcf4aa803e' /&gt;
+
+比如上图的例子中，x'=0的点称为**不动点**，黑色实心点称为**稳定的**不动点，空心点称为**不稳定**的不动点。</description><guid isPermaLink="true">https://JingyaoWang666.github.io/post/%5BNonlinear%20dynamics%20and%20chaos%5DChapter2%20-yi-wei-liu.html</guid><pubDate>Tue, 03 Feb 2026 11:21:52 +0000</pubDate></item><item><title>[Nonlinear dynamics and chaos]Chapter1 课程介绍和概述</title><link>https://JingyaoWang666.github.io/post/%5BNonlinear%20dynamics%20and%20chaos%5DChapter1%20-ke-cheng-jie-shao-he-gai-shu.html</link><description>### Logical structure of dynamics:
+
+动力学系统主要有两类：微分方程和迭代映射（差分方程），前者是系统在连续时间的演化，后者出现在离散时间的问题中。</description><guid isPermaLink="true">https://JingyaoWang666.github.io/post/%5BNonlinear%20dynamics%20and%20chaos%5DChapter1%20-ke-cheng-jie-shao-he-gai-shu.html</guid><pubDate>Tue, 03 Feb 2026 04:26:32 +0000</pubDate></item><item><title>[Agentic AI]Module5笔记</title><link>https://JingyaoWang666.github.io/post/%5BAgentic%20AI%5DModule5-bi-ji.html</link><description>高度自治智能体的模式（Patterns for Highly Autonomous Agents）
+
+### 一、Planning workflows 规划工作流
+
+对于highly autonomous agent，会有planning的概念：即给LLM一套工具，给一个系统提示词，LLM根据问题自主规划工作流。</description><guid isPermaLink="true">https://JingyaoWang666.github.io/post/%5BAgentic%20AI%5DModule5-bi-ji.html</guid><pubDate>Sat, 24 Jan 2026 02:23:31 +0000</pubDate></item><item><title>[Systems Engineering]b站讲座笔记</title><link>https://JingyaoWang666.github.io/post/%5BSystems%20Engineering%5Db-zhan-jiang-zuo-bi-ji.html</link><description>### 一、什么是系统工程？
+系统工程可能开始于一个模糊的概念，关注整体系统与外界交互的功能。</description><guid isPermaLink="true">https://JingyaoWang666.github.io/post/%5BSystems%20Engineering%5Db-zhan-jiang-zuo-bi-ji.html</guid><pubDate>Tue, 20 Jan 2026 02:30:12 +0000</pubDate></item><item><title>[Agentic AI]Module 4 笔记</title><link>https://JingyaoWang666.github.io/post/%5BAgentic%20AI%5DModule%204%20-bi-ji.html</link><description>### 一、评估（Evals）
+在优化系统时需要一个评估系统来指示系统表现。</description><guid isPermaLink="true">https://JingyaoWang666.github.io/post/%5BAgentic%20AI%5DModule%204%20-bi-ji.html</guid><pubDate>Mon, 19 Jan 2026 11:05:15 +0000</pubDate></item><item><title>[Agentic AI]Module3笔记</title><link>https://JingyaoWang666.github.io/post/%5BAgentic%20AI%5DModule3-bi-ji.html</link><description>### 一、工具使用 Tool Use
+
+流程：输入提示词——LLM决定是否调用工具箱中的工具——调用特定工具，工具输出结果作为上下文给LLM——LLM输出结果
+对于更复杂的请求，模型也可以串联调用多个工具，形成工作流。</description><guid isPermaLink="true">https://JingyaoWang666.github.io/post/%5BAgentic%20AI%5DModule3-bi-ji.html</guid><pubDate>Sun, 18 Jan 2026 15:09:18 +0000</pubDate></item><item><title>[Agentic AI]Module2笔记</title><link>https://JingyaoWang666.github.io/post/%5BAgentic%20AI%5DModule2-bi-ji.html</link><description>“反思模式”是经常使用且实现起来出奇的简单的一种方法。</description><guid isPermaLink="true">https://JingyaoWang666.github.io/post/%5BAgentic%20AI%5DModule2-bi-ji.html</guid><pubDate>Thu, 15 Jan 2026 14:35:49 +0000</pubDate></item><item><title>[Agentic AI]Module1笔记</title><link>https://JingyaoWang666.github.io/post/%5BAgentic%20AI%5DModule1-bi-ji.html</link><description>### 一、介绍
+课程目标：掌握如何用智能体构建应用，是 AI 领域中最重要且最有价值的技能之一。</description><guid isPermaLink="true">https://JingyaoWang666.github.io/post/%5BAgentic%20AI%5DModule1-bi-ji.html</guid><pubDate>Tue, 13 Jan 2026 14:38:53 +0000</pubDate></item><item><title>[lecture]1130Verilog培训讲座</title><link>https://JingyaoWang666.github.io/post/%5Blecture%5D1130Verilog-pei-xun-jiang-zuo.html</link><description>[file:///C:/Users/Lenovo/Desktop/笔记/1130Verilog培训讲座.pdf](url)。</description><guid isPermaLink="true">https://JingyaoWang666.github.io/post/%5Blecture%5D1130Verilog-pei-xun-jiang-zuo.html</guid><pubDate>Sun, 30 Nov 2025 03:47:50 +0000</pubDate></item><item><title>[数电讨论]1119讨论课 精彩技术分享</title><link>https://JingyaoWang666.github.io/post/%5B-shu-dian-tao-lun-%5D1119-tao-lun-ke-%20-jing-cai-ji-shu-fen-xiang.html</link><description>### 一、复杂边缘显示
+
+
+像在我们写的打砖块代码里，图形显示全是手写代码进行逻辑判断，然后画出形状。</description><guid isPermaLink="true">https://JingyaoWang666.github.io/post/%5B-shu-dian-tao-lun-%5D1119-tao-lun-ke-%20-jing-cai-ji-shu-fen-xiang.html</guid><pubDate>Tue, 25 Nov 2025 01:44:34 +0000</pubDate></item><item><title>[模电总结]多级放大电路估算题 试总结</title><link>https://JingyaoWang666.github.io/post/%5B-mo-dian-zong-jie-%5D-duo-ji-fang-da-dian-lu-gu-suan-ti-%20-shi-zong-jie.html</link><description>**书第三章p165 13（b）**
+
+“估算”的部分主要体现在第二级的小基极电流忽略。</description><guid isPermaLink="true">https://JingyaoWang666.github.io/post/%5B-mo-dian-zong-jie-%5D-duo-ji-fang-da-dian-lu-gu-suan-ti-%20-shi-zong-jie.html</guid><pubDate>Tue, 25 Nov 2025 00:51:30 +0000</pubDate></item><item><title>[感受]大胆做一坨shit出来，然后再优化</title><link>https://JingyaoWang666.github.io/post/%5B-gan-shou-%5D-da-dan-zuo-yi-tuo-shit-chu-lai-%EF%BC%8C-ran-hou-zai-you-hua.html</link><description>今天在做数电荣誉课讨论发言的ppt。</description><guid isPermaLink="true">https://JingyaoWang666.github.io/post/%5B-gan-shou-%5D-da-dan-zuo-yi-tuo-shit-chu-lai-%EF%BC%8C-ran-hou-zai-you-hua.html</guid><pubDate>Sun, 23 Nov 2025 13:19:02 +0000</pubDate></item><item><title>[RISC-V CPU]第七章 CPU的结构与功能 笔记（一）</title><link>https://JingyaoWang666.github.io/post/%5BRISC-V%20CPU%5D-di-qi-zhang-%20CPU-de-jie-gou-yu-gong-neng-%20-bi-ji-%EF%BC%88-yi-%EF%BC%89.html</link><description>### 一、控制器概述
+
+
+**1.控制器的功能**
+取指令——&gt;分析指令——&gt;执行指令（包括总线管理、中断异常处理等）
+控制单元根本任务：根据指令要求依次发出一系控制信号（控制一系列受控门）
+
+
+&lt;img width='655' height='500' alt='Image' src='https://github.com/user-attachments/assets/00f77469-cb1c-4cf4-8abf-16fcefc71fda' /&gt;
+
+
+**2.指令周期**
+包括：取指周期、间址周期、执行周期、中断周期。</description><guid isPermaLink="true">https://JingyaoWang666.github.io/post/%5BRISC-V%20CPU%5D-di-qi-zhang-%20CPU-de-jie-gou-yu-gong-neng-%20-bi-ji-%EF%BC%88-yi-%EF%BC%89.html</guid><pubDate>Fri, 21 Nov 2025 06:22:46 +0000</pubDate></item><item><title>[RISC-V CPU]第六章 指令系统 笔记（二）</title><link>https://JingyaoWang666.github.io/post/%5BRISC-V%20CPU%5D-di-liu-zhang-%20-zhi-ling-xi-tong-%20-bi-ji-%EF%BC%88-er-%EF%BC%89.html</link><description>### 1.指令系统概述复习
+指令的设计是很有较大自由度，比如不同地址数目的指令。</description><guid isPermaLink="true">https://JingyaoWang666.github.io/post/%5BRISC-V%20CPU%5D-di-liu-zhang-%20-zhi-ling-xi-tong-%20-bi-ji-%EF%BC%88-er-%EF%BC%89.html</guid><pubDate>Fri, 21 Nov 2025 02:55:07 +0000</pubDate></item><item><title>[RISC-V CPU]第六章 指令系统 笔记（一）</title><link>https://JingyaoWang666.github.io/post/%5BRISC-V%20CPU%5D-di-liu-zhang-%20-zhi-ling-xi-tong-%20-bi-ji-%EF%BC%88-yi-%EF%BC%89.html</link><description>### 1.指令系统的发展
+
+（1）一条发展路径为：增强指令的功能和数目，缩小与高级语言的语义差异，简化编译器设计，同时硬件复杂度提升。</description><guid isPermaLink="true">https://JingyaoWang666.github.io/post/%5BRISC-V%20CPU%5D-di-liu-zhang-%20-zhi-ling-xi-tong-%20-bi-ji-%EF%BC%88-yi-%EF%BC%89.html</guid><pubDate>Tue, 18 Nov 2025 13:40:47 +0000</pubDate></item><item><title>Blog Trial</title><link>https://JingyaoWang666.github.io/post/Blog%20Trial.html</link><description>== try to build the blog website ==。</description><guid isPermaLink="true">https://JingyaoWang666.github.io/post/Blog%20Trial.html</guid><pubDate>Tue, 18 Nov 2025 08:36:10 +0000</pubDate></item></channel></rss>
